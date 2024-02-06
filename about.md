@@ -10,3 +10,5 @@ title: About
 ## About Me
 
 {{site.author_description}}
+
+I am a student at Brigham Young University 
