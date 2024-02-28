@@ -2,8 +2,8 @@
 layout: post
 title:  "Reading a robots.txt file"
 date: 2024-02-24
-description: A quick introduction on how to read a robots.txt file
-image: "/assets/img/image5.jpg"
+description: 'A quick introduction on how to read a robots.txt file'
+# image: "/assets/img/image5.jpg"
 display_image: false  # change this to true to display the image below the banner 
 ---
 
