@@ -53,7 +53,7 @@ Disallow: /confirmednewpassword/
 Disallow: /profile/
 Disallow: /orders/
 
-sitemap: https://www.expomarkers.com/sitemap_index.xml
+sitemap: https://www.expomarkers.com/sitemap_index.xml 
 {%- endhighlight -%}
 
 We can see here that for most people, everything is allowed except for a some things mostly pertaining to the account, cart, or orders and they do have a sitemap. There is no crawl-delay so feel free to scrape as fast as you wish.
@@ -85,12 +85,12 @@ We can see here that for most people, everything is allowed except for anything 
 
 While the `robots.txt` file is typically a simple text document with no formatting, by adding a comment line (starting a line with #), it can be more personalized. Let me show two `robots.txt` with interesting comments that I have found. 
 
-1. [Nike](https://www.nike.com/robots.txt) found a way to brand their own text document. 
+1. [Nike](https://www.nike.com/robots.txt) even found a way to brand their own text document at the end. I wouldn't expect anything less from Nike.
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nike.png)
 
-2. [Wikipedia](https://en.wikipedia.org/robots.txt) has included comments that sound like a scolding mother that I found entertaining. Some of these comments I have put below, but by all means see if there are others yourself. Most of these comments are directed to specific user-agents. 
+2. [Wikipedia](https://en.wikipedia.org/robots.txt) has included comments that sound like a scolding mother that I found entertaining. Some of these comments I have put below, but by all means see if there are some others for yourself. Most of these comments are directed to specific user-agents. 
 
-{%- highlight python -%} 
+{%- highlight text -%} 
 # Please note: There are a lot of pages on this site, and there are
 # some misbehaved spiders out there that go _way_ too fast. If you're
 # irresponsible, your access to the site may be blocked.
