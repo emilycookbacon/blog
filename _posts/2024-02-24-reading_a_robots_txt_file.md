@@ -2,7 +2,7 @@
 layout: post
 title:  "Reading a robots.txt file"
 date:   2024-02-24
-description: "A quick introduction on how to read a robots.txt file"
+description: "A quick introduction on how to read a robots.txt file and some fun examples"
 # image: "/assets/img/image5.jpg"
 display_image: false  # change this to true to display the image below the banner 
 ---
@@ -12,10 +12,10 @@ display_image: false  # change this to true to display the image below the banne
 
 ### Why does a robots.txt file matter?
 
-The purpose of `robots.txt` file is to communicate what rules the website creator would like you to follow when scraping their website. You might be thinking, "I'm not a robot, so why should I care about this at all?" While you might not be a robot yourself, if you are writing code to gather online information then these guidelines would apply. It is, afterall, your program that is pulling the information for you. While there is no legal obligation to follow the guidelines set in the `robots.txt` file, it is important for ethical web scraping to respect the bounds the host has said. They might want to block certain users or files for privacy and security. They might want to delay access so it doesn't impact other site users. It is within the host's discretion to block certain users from accessing their site. Let me first explain where you might access one to look at. 
+The purpose of `robots.txt` file is to communicate what rules the website creator would like you to follow when scraping their website. You might be thinking, "I'm not a robot, so why should I care about this at all?" While you might not be a robot yourself, if you are writing code to gather online information then these guidelines would apply. It is, afterall, your program that is pulling the information for you. While there is no legal obligation to follow the guidelines set in the `robots.txt` file, it is important for ethical web scraping to respect the bounds the host has said. They might want to block certain users or files for privacy and security or they might want to delay access so it doesn't impact other site users. It is within the host's discretion to block certain users from accessing their site. Let me first explain where to access one so you can look yourself. 
 
 ### Where robots.txt is located
-On any given website when you are on the home page, typically the website url starts with `http://`, has the name of the website and the ends in a  `.com`, `.edu`, `.gov` or something of the like. The After said url, tack on `/robots.txt` and the information for the web scraping guidelines should come right up. This post will go through some examples, but first let me explain some things you might see.
+On any given website when you are on the home page, typically the website url starts with `http://`, has the name of the website and the ends in a  `.com`, `.edu`, `.gov` or something of the like. The url at this point is what we refer to as the baseurl. After said baseurl, tack on `/robots.txt` and the information for the web scraping guidelines should come right up. This post will go through some examples, but first let me explain some things you might see.
 
 ### Robots.txt content
 
@@ -36,7 +36,8 @@ Any of the following examples are based on when this post was published and may 
 1. Expo Markers Example
 For example if we look at the website for [Expo Markers](https://www.expomarkers.com/robots.txt), at we would get the following text:
 
-{% raw %} User-Agent: *
+{%- highlight txt -%} 
+User-Agent: *
 Allow: /
  
 Disallow: /*cart
@@ -47,7 +48,8 @@ Disallow: /confirmednewpassword/
 Disallow: /profile/
 Disallow: /orders/
 
-sitemap: https://www.expomarkers.com/sitemap_index.xml{% endraw %}
+sitemap: https://www.expomarkers.com/sitemap_index.xml
+{%- endhighlight -%}
 
 We can see here that for most people, everything is allowed except for a some things mostly pertaining to the account, cart, or orders and they do have a sitemap. 
 
